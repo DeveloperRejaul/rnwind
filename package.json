@@ -2,11 +2,28 @@
   "name": "rnwind",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start": "nodemon lib/index.js"
   },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/**/*"
+  ],
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Rezaul Karim",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
 }
